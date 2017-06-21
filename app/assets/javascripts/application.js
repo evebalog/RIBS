@@ -22,6 +22,11 @@ $( document ).ready(function() {
   $('#calendar').fullCalendar({
     dayClick: function() {
         alert('a day has been clicked!');
-    }
+    },
+    header: {
+        left: 'prev',
+        center: 'title',
+        right : 'next'
+    },
   });
 });
