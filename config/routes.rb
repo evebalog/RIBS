@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
-  get 'calendar/index'
+  # get 'calendar/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :trainees do
+    resources :bookings
+  end
 
+  resources :instructors do
+    resources :bookings
+  end
+
+resources :bookings
   # You can have the root of your site routed with "root"
   root 'calendar#index'
 
